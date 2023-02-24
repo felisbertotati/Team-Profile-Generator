@@ -2,7 +2,7 @@
 const Employee = require("./Employee");
 
 class Manager extends Employee {
-  constructor(name, id, email, officeNumber) {
+  constructor(name, id, email) {
     // super refers to the parent class constructor, and it will call from the `Employee` class with the id, name and email parameters.
     super(name, id, email, officeNumber);
     this.officeNumber = officeNumber;
