@@ -21,18 +21,18 @@ const menuQuestions = [
     choice: ["Add a Manager", "Add an Engineer", "Add an Intern"],
   },
 ];
-
+// manager questions
 const promptManager = () => {
   return inquirer.prompt([
     {
       type: `input`,
       name: `name`,
-      message: `What is your name? (Required)`,
+      message: `What is the Manager name? (Required)`,
       validade: (nameInput) => {
         if (nameInput) {
           return true;
         } else {
-          console.log(`Please enter your name!`);
+          console.log(`Please enter the Manager name!`);
           return false;
         }
       },
@@ -40,12 +40,12 @@ const promptManager = () => {
     {
       type: `input`,
       name: `id`,
-      message: ` What is your Manager ID? (Required)`,
+      message: ` What is teh Manager ID? (Required)`,
       validate: (answer) => {
         if (answer) {
           return true;
         } else {
-          console.log(`Please enter your ID!`);
+          console.log(`Please enter the Manager ID!`);
           return false;
         }
       },
@@ -53,12 +53,12 @@ const promptManager = () => {
     {
       type: `input`,
       name: `email`,
-      message: `What is your email adress? (Require)`,
+      message: `What is the Manager email adress? (Require)`,
       validate: (answer) => {
         if (answer) {
           return true;
         } else {
-          console.log("Please provide your Email!");
+          console.log("Please provide the Manger Email!");
           return false;
         }
       },
@@ -68,6 +68,56 @@ const promptManager = () => {
       message: `Enter the office's number: `,
       name: `OfficeNumber`,
       validade: (answer) => confirmNumber(answer),
+    },
+  ]);
+};
+//Engineer questions
+const EngineerQuestions = () => {
+  return inquirer.prompt([
+    {
+      type: `input`,
+      name: `name`,
+      message: `What is the Engineer name? (Required)`,
+      validade: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log(`Please enter the Engineer name!`);
+          return false;
+        }
+      },
+    },
+    {
+      type: `input`,
+      name: `id`,
+      message: ` What is the Engineer ID? (Required)`,
+      validate: (answer) => {
+        if (answer) {
+          return true;
+        } else {
+          console.log(`Please enter the Engineer ID!`);
+          return false;
+        }
+      },
+    },
+    {
+      type: `input`,
+      name: `email`,
+      message: `What is the Engineer email adress? (Require)`,
+      validate: (answer) => {
+        if (answer) {
+          return true;
+        } else {
+          console.log("Please provide the Engineer Email!");
+          return false;
+        }
+      },
+    },
+    {
+      type: `input`,
+      name: `github`,
+      message: `What is the Engineer's Github username? `,
+      validade: (answer) => confirmUsername(answer, "Github username"),
     },
   ]);
 };
