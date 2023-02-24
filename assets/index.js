@@ -121,3 +121,53 @@ const EngineerQuestions = () => {
     },
   ]);
 };
+
+const InternQuestions = () => {
+  return inquirer.prompt([
+    {
+      type: `input`,
+      name: `name`,
+      message: `What is the Intern name? (Required)`,
+      validade: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log(`Please enter the Intern name!`);
+          return false;
+        }
+      },
+    },
+    {
+      type: `input`,
+      name: `id`,
+      message: ` What is the Intern ID? (Required)`,
+      validate: (answer) => {
+        if (answer) {
+          return true;
+        } else {
+          console.log(`Please enter the Intern ID!`);
+          return false;
+        }
+      },
+    },
+    {
+      type: `input`,
+      name: `email`,
+      message: `What is the Intern email adress? (Require)`,
+      validate: (answer) => {
+        if (answer) {
+          return true;
+        } else {
+          console.log("Please provide the Intern Email!");
+          return false;
+        }
+      },
+    },
+    {
+      type: `input`,
+      name: `school`,
+      message: `What School did the Inten attend?`,
+      validate: (answer) => confirmShool(answer, "School"),
+    },
+  ]);
+};
