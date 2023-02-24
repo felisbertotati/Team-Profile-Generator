@@ -16,11 +16,12 @@ const render = require("./src/page-template.js");
 const menuQuestions = [
   {
     type: "list",
-    message: "Choose an option",
+    message: "Choose an option: ",
     name: `option`,
     choice: ["Add a Manager", "Add an Engineer", "Add an Intern"],
   },
 ];
+
 // manager questions
 const promptManager = () => {
   return inquirer.prompt([
