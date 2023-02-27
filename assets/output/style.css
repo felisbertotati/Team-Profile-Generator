@@ -1,32 +1,38 @@
 .team-heading {
-  background-color: #1ac96c;
-  color: #ffffff;
+  background-color: #804674;
+  color: white;
+  height: 150px;
 }
-​ .team-area {
+
+.team-area {
   max-width: 1000px;
   margin: 3em auto;
   flex-wrap: wrap;
 }
-​ .employee-card {
+
+.employee-card {
   margin: 1em;
   max-width: 280px;
   width: 90%;
   min-height: 22rem;
-  background-color: #007bff;
-  color: white;
+  background-color: #a86464;
+  color: aliceblue;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   border: none;
+  border-radius: 15px;
 }
-​ .card-body {
+
+.card-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f6f7f8;
+  background-color: #e4c988;
 }
-​ .list-group-item {
-  color: #000000;
+
+.list-group-item {
+  color: black;
   text-decoration: none;
 }
