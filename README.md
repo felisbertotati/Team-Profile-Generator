@@ -27,7 +27,11 @@ Run the application:
 
 ## Usage
 
-You can use this application by running `node index.js`. Bellow I will show in the video.
+You can use this application by running `node index.js`.
+Bellow it's the generator HTML photo.
+
+ ![image](https://user-images.githubusercontent.com/116450519/221925088-ad9d3532-1f95-4ce8-9537-26644768c958.png)
+)
 
 ## License
 
@@ -47,7 +51,7 @@ To run tests, run the following command:
 
 and after:
 
-`npm run test`.
+`npm run test`
 
 ## Questions
 
