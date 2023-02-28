@@ -15,6 +15,7 @@ const team = [];
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 // lest build a team
 
+//menu options
 const menuQuestions = [
   {
     type: "list",
@@ -124,6 +125,7 @@ const EngineerQuestions = [
   },
 ];
 
+//intern
 const InternQuestions = [
   {
     type: "input",
@@ -143,6 +145,7 @@ const InternQuestions = [
     name: "id",
     message: " What is the Intern ID? (Required)",
     validate: function (value) {
+      //only numbers will be allowed
       const valid = !isNaN(parseFloat(value));
       return valid || "Please enter a number";
     },
@@ -152,6 +155,7 @@ const InternQuestions = [
     name: "email",
     message: "What is the Intern email adress? (Require)",
     validate: (answer) => {
+      // this const is to validate the email. user have to put a validate email
       const testEmail = /\S+@\S+\.\S+/.test(answer);
       if (testEmail === false || testEmail == "") {
         return "Please provide a valid email";
