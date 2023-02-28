@@ -53,6 +53,10 @@ and after:
 
 `npm run test`
 
+## Note
+
+The HTML file and some style was provided in class.
+
 ## Questions
 
 If you have any question you can email me our find me in my GitHub:
