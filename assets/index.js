@@ -53,11 +53,11 @@ const promptManager = [
     name: "email",
     message: "What is the Manager email adress? (Require)",
     validate: (answer) => {
-      if (answer) {
-        return true;
+      const testEmail = /\S+@\S+\.\S+/.test(answer);
+      if (testEmail === false || testEmail == "") {
+        return "Please provide a valid email";
       } else {
-        console.log("Please provide the Manger Email!");
-        return false;
+        return true;
       }
     },
   },
@@ -101,11 +101,11 @@ const EngineerQuestions = [
     name: "email",
     message: "What is the Engineer email adress? (Require)",
     validate: (answer) => {
-      if (answer) {
-        return true;
+      const testEmail = /\S+@\S+\.\S+/.test(answer);
+      if (testEmail === false || testEmail == "") {
+        return "Please provide a valid email";
       } else {
-        console.log("Please provide the Engineer Email!");
-        return false;
+        return true;
       }
     },
   },
@@ -152,14 +152,15 @@ const InternQuestions = [
     name: "email",
     message: "What is the Intern email adress? (Require)",
     validate: (answer) => {
-      if (answer) {
-        return true;
+      const testEmail = /\S+@\S+\.\S+/.test(answer);
+      if (testEmail === false || testEmail == "") {
+        return "Please provide a valid email";
       } else {
-        console.log("Please provide the Intern Email!");
-        return false;
+        return true;
       }
     },
   },
+
   {
     type: "input",
     name: "school",
@@ -189,7 +190,7 @@ function returnToMenu() {
       if (answer.returnToMenu) {
         promptMenu();
       } else {
-        console.log("Goodbye!");
+        console.log("Thank");
       }
     });
 }
