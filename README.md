@@ -4,7 +4,7 @@
 
 ## Description:
 
-In this project create an application that will take all the information about employees on a software engineering team, the generate an HTML webpage that displays summmaies for each peson. this application was provide with tests, one of the taskes was passe on each provided test.
+In this project I created an application that will take all the information about employees on a software engineering team, then generate an HTML webpage that displays all the details gathered for each peson. This application includes tests, one of the taskes was to pass each provided test.
 
 ## Table of Contents
 
